@@ -24,9 +24,6 @@ const SendMessage = async (send_from, send_to, subject, person, mail, msg, res) 
     transporter.sendMail(options, (error, info) => {
         if (error) {
             console.log(error)
-            res.status(500).json({
-                success: false
-            })
             throw error
         } else {
             console.log(info)

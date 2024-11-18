@@ -24,9 +24,6 @@ const SendEnquiry = async (send_from, send_to, subject, ph, person, mail, tour, 
     transporter.sendMail(options, (error, info) => {
         if (error) {
             console.log(error)
-            res.status(500).json({
-                success: false
-            })
             throw error
         } else {
             console.log(info)
